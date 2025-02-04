@@ -13,7 +13,7 @@ class JsonValidator:
             return None
         
     def is_valid_json(self, content):
-        pattern = r'^\{(\s*"\w+":\s*"\w+"\s*)*(,\s*"\w+":\s*"\w+"\s*)*\}$'  # Matches a string that starts and ends with curly braces
+        pattern = r'^\{(\s*"\w+":\s*("\w+"|\d+|true|false|null)\s*)*(,\s*"\w+":\s*("\w+"|\d+|true|false|null)\s*)*\}$'
         return bool(re.match(pattern, content))
     
     def validate(self):

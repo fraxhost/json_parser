@@ -7,9 +7,11 @@ from src.cc_json_parser.validator import JsonValidator
             ('.\\tests\\step1\\valid.json', True),
             ('.\\tests\\step2\\valid.json', True),
             ('.\\tests\\step2\\valid2.json', True),
+            ('.\\tests\\step3\\valid.json', True),
             ('.\\tests\\step1\\invalid.json', False),
             ('.\\tests\\step2\\invalid.json', False),
-            ('.\\tests\\step2\\invalid2.json', False)
+            ('.\\tests\\step2\\invalid2.json', False),
+            ('.\\tests\\step3\\invalid.json', False),
         ]
 )
 def test_json(file_path, expected_result):
