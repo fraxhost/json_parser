@@ -7,4 +7,11 @@ if __name__ == '__main__' :
         sys.exit(1)
     
     validator = JsonValidator(sys.argv[1])
-    validator.validate()
+    isValid = validator.validate()
+
+    if isValid:
+        print('Valid JSON')
+        exit(0)
+    else:
+        print('Invalid JSON')
+        exit(1)
